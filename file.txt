@@ -1,0 +1,7 @@
+
+7. Add the Mobile Responsiveness - After completing desktop View 2 days for Responsiveness - 4th
+8. Add the Multi lang support - Saturday - 3rd
+9. Add the Dark and light theme toggle - Sunday - 1st
+10. Add the Items to the favorites - Wednesday - 2nd
+11. Add the authentication and authorization - Thursday, Sat, Sunday - backend
+It should complete before feb 11
