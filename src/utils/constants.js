@@ -12,3 +12,7 @@ export const PERCENTAGE_ICON_URI = "https://media-assets.swiggy.com/swiggy/image
 export const RESTAURANT_MENU_IMAGE_URI = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/"
 export const HEART_ICON = "https://cdn-icons-png.flaticon.com/128/6521/6521659.png"
 export const OFFER_IMAGE = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/Store_Assets/Icons/"
+export const HAMBURGER_ICON_URI = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
+export const ONBOARDING_URI = "https://www.swiggy.com/dapi/support/issues/partner-onboarding?"
+export const LEGAL_URI = "https://www.swiggy.com/dapi/support/issues/legal?"
+export const FAQ_URI = "https://www.swiggy.com/dapi/support/issues/faq?"
