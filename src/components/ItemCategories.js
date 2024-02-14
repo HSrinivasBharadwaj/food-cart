@@ -1,16 +1,27 @@
 import React from "react";
 import { RESTAURANT_MENU_IMAGE_URI } from "../utils/constants";
+import { addToCart } from "../features/cart/cartSlice";
+import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
 
 const ItemCategories = ({ info }) => {
+  const dispatch = useDispatch();
   const { itemCards } = info;
+  const addItemsToCart = (items) => {
+    let quantity = 1;
+    dispatch(addToCart({items,quantity}))
+    toast("Item added to cart")
+  }
   return (
-    <main className="flex flex-col ">
+    <main className="flex flex-col">
+      <ToastContainer />
       {itemCards &&
         itemCards.map((items) => {
           return (
-            <>
+            <div key={items.card.info.id}>
               <div
-                key={items.card.info.id}
                 className="flex justify-between items-center my-5"
               >
                 <div>
@@ -30,13 +41,13 @@ const ItemCategories = ({ info }) => {
                     alt={items.card.info.name}
                     className="w-20 h-20 object-cover rounded-lg"
                   />
-                  <button className="bg-green-500 text-white cursor-pointer rounded-lg p-2 mt-3">
+                  <button onClick={() => addItemsToCart(items.card.info)} className="bg-green-500 text-white cursor-pointer rounded-lg p-2 mt-3">
                     Add To Cart
                   </button>
                 </div>
               </div>
               <hr />
-            </>
+            </div>
           );
         })}
     </main>
