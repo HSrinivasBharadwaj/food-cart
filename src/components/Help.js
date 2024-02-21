@@ -17,7 +17,7 @@ const Help = () => {
 
   return (
     <main className="flex bg-[#37718e]">
-      <aside className="w-48 bg-white p-4">
+      <aside className="w-20 p-2 md:w-32 lg:w-32 xl:w-32 bg-white md:p-4 lg:p-4 xl:p-4">
         <div className="flex flex-col space-y-4">
           <h1
             className="text-lg cursor-pointer hover:text-blue-500"
