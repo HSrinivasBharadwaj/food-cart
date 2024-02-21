@@ -1,11 +1,9 @@
 
-11. Design Help Page - InProgress
-12. Mobile Responsiveness for the above pages - In Progress
-13. Add the dark and light toggle mode - Thursday
-14. authentication and authorization - Thursday 
+13. Add the dark and light toggle mode - Wednesday and learning useContext
+14. authentication and authorization -  
 15. Design Login and signup using jwt - Friday, Tuesday,Wednesday, Thursday, Saturday, Sunday
 16. Add logged in users cartItems to the favorites
 17. Add the Testing using jest
-Before februarry
+Before february
 
 
