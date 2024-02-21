@@ -1,7 +1,7 @@
 import React from "react";
 import useFetchRestaurantDetail from "../hooks/useFetchRestaurantDetail";
 import { useParams } from "react-router-dom";
-import { RESTAURANT_MENU_IMAGE_URI, OFFER_IMAGE } from "../utils/constants";
+import { RESTAURANT_MENU_IMAGE_URI } from "../utils/constants";
 import ItemCategories from "./ItemCategories";
 
 const RestaurantDetail = () => {
@@ -10,6 +10,8 @@ const RestaurantDetail = () => {
     useFetchRestaurantDetail(params.id);
   const { info } = titleDetails;
   const { offers } = offersDetails;
+
+ 
 
   if (
     loading ||
