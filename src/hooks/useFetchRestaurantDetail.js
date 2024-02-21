@@ -12,12 +12,22 @@ const useFetchRestaurantDetail = (id) => {
     setLoading(true);
     try {
       const response = await axios.get(RESTAURANT_DETAIL_URI + id);
-      setTitleDetails(response.data.data.cards[0].card.card);
-      setOffersDetails(
-        response.data.data.cards[1].card.card.gridElements.infoWithStyle
+      // Uncomment the following code for previous api calls
+      // setTitleDetails(response.data.data.cards[0].card.card);
+      // setOffersDetails(
+      //   response.data.data.cards[1].card.card.gridElements.infoWithStyle
+      // );
+      // setRestaurantMenuDetails(
+      //   response.data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards.slice(
+      //     1
+      //   )
+      // );
+      setTitleDetails(response.data.data.cards[2].card.card);
+       setOffersDetails(
+        response.data.data.cards[3].card.card.gridElements.infoWithStyle
       );
-      setRestaurantMenuDetails(
-        response.data.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards.slice(
+       setRestaurantMenuDetails(
+        response.data.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.slice(
           1
         )
       );
