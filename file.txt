@@ -1,9 +1,5 @@
 
-13. Add the dark and light toggle mode - Wednesday and learning useContext
-14. authentication and authorization -  
-15. Design Login and signup using jwt - Friday, Tuesday,Wednesday, Thursday, Saturday, Sunday
-16. Add logged in users cartItems to the favorites
-17. Add the Testing using jest
-Before february
+13. Add the dark and light toggle mode - Wednesday, Thursday
+14. Authentication and authorization - Learn Python (Django)
 
 
