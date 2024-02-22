@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { CART_URI, LOGO_URI, HAMBURGER_ICON_URI } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ToggleButton from "./ToggleButton";
 
-const Header = () => {
+const Header = ({ darkMode, setDarkMode }) => {
   const [showHamburgerIcon, setShowHamburgerIcon] = useState(false);
   let totalQuantity = 0;
   const getCartItems = useSelector((state) => state.cart.cartItems);
@@ -11,7 +12,6 @@ const Header = () => {
     totalQuantity = totalQuantity + getCartItems[i].quantity;
   }
   const navigate = useNavigate();
-  const [searchValue, setSearchValue] = useState("");
   const goToHome = () => {
     navigate("/");
   };
@@ -71,16 +71,6 @@ const Header = () => {
                 Help
               </a>
             </li>
-
-            <li className="mx-5">
-              <input
-                type="text"
-                placeholder="Enter the restaurant you are looking for"
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-                className="border border-gray-500 rounded-md w-40 p-1 md:w-80 lg:w-80 xl:w-80"
-              />
-            </li>
             <li className="mx-5">
               <a className="flex items-center">
                 <img
@@ -121,16 +111,6 @@ const Header = () => {
               Help
             </a>
           </li>
-
-          <li className="mx-5">
-            <input
-              type="text"
-              placeholder="Enter the restaurant you are looking for"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-              className="border border-gray-500 rounded-md w-40 p-1 md:w-80 lg:w-80 xl:w-80"
-            />
-          </li>
           <li className="mx-5">
             <a className="flex items-center">
               <img
@@ -149,6 +129,9 @@ const Header = () => {
             <button className="bg-black rounded-lg cursor-pointer text-white w-24 p-2">
               SignIn
             </button>
+          </li>
+          <li className="mx-5">
+            <ToggleButton darkMode={darkMode} setDarkMode={setDarkMode} />
           </li>
         </ul>
       </nav>
